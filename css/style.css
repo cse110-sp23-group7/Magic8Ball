@@ -1,0 +1,13 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: coral;
+}

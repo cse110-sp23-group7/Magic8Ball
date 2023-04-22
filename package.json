@@ -1,0 +1,25 @@
+{
+  "name": "magic8ball",
+  "version": "1.0.0",
+  "description": "CSE 110 Team 404 Project which uses ChatGPT to create a Magic 8 Ball app.",
+  "main": "js/script.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse110-sp23-group7/Magic8Ball.git"
+  },
+  "author": "Team 404",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse110-sp23-group7/Magic8Ball/issues"
+  },
+  "homepage": "https://github.com/cse110-sp23-group7/Magic8Ball#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

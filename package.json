@@ -19,7 +19,8 @@
     "url": "https://github.com/cse110-sp23-group7/Magic8Ball/issues"
   },
   "homepage": "https://github.com/cse110-sp23-group7/Magic8Ball#readme",
-  "devDependencies": {
+  "dependencies": {
+    "jest-environment-jsdom": "^29.5.0",
     "jest": "^29.5.0"
   }
 }

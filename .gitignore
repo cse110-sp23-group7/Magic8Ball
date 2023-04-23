@@ -32,8 +32,6 @@ ehthumbs.db
 Desktop.ini
 
 # Test files
-/__tests__/
-*.test.js
 *.spec.js
 
 # Log files

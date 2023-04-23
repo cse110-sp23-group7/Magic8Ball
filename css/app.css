@@ -51,26 +51,25 @@ h1 {
     height: 397px;
     margin: 50px auto;
     border-radius: 50%;
-    background-color: black;
     background-image: url('../images/8ballemptynew.png');
     position: relative;
     animation: shake-animation;
 }
 #answer {
-    width: 120px;
-    height: 120px;
-    /*background-image: url('../images/magic-ball.png');*/
+    width: 230px;
+    height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
     position: absolute;
-    top: 135px;
-    left: 135px;
+    top: 83px;
+    left: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
+    font-family: 'Source Code Pro';
     color: black;
 }
 #shake-button {

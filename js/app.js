@@ -1,23 +1,24 @@
 const answers = [
-    'It is certain',
-    'It is decidedly so',
-    'Without a doubt',
-    'Yes – definitely',
-    'You may rely on it',
-    'As I see it, yes',
-    'Most likely',
-    'Outlook good',
-    'Yes',
-    'Signs point to yes',
-    'Reply hazy, try again',
-    'Ask again later',
-    'Better not tell you now',
-    'Cannot predict now',
-    'Concentrate and ask again',
-    'Don\'t count on it',
-    'Outlook not so good',
-    'My sources say no',
-    'Very doubtful'
+    `Error: Null pointer dereference`,
+    `Error: Off-by-one error`,
+    `Error: Division by zero`,
+    `Error: Stack overflow`,
+    `Error: Buffer overflow`,
+    `Error: Race condition`,
+    `Error: Logic error`,
+    `Error: Syntax error`,
+    `Error: Memory leak`,
+    `Error: Endless loop`,
+    'Error: Type mismatch',
+    'Error: Resource contention',
+    'Error: File not found',
+    'Error: Invalid input',
+    'Error: Deadlock',
+    'Error: Assertion failure',
+    'Error: Floating point error',
+    'Error: Out of bounds error',
+    'Error: Incorrect data format',
+    'Error: Improper error handling'
 ];
 const eightBall = document.querySelector('#eight-ball');
 const answer = document.querySelector('#answer');
@@ -68,13 +69,13 @@ function getAnswer() {
 }
 
 function fadeAnswerIn(opacity) {
-    const fadeInSpeed = 0.1;
+    const fadeInSpeed = 0.05;
     if (opacity < 1) {
         opacity += fadeInSpeed;
         answer.style.opacity = opacity;
         setTimeout(() => {
             fadeAnswerIn(opacity); // Recursively call until opacity reaches 1
-        }, 100);
+        }, 50);
     }
 }
 

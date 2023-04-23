@@ -1,9 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Sedgwick Ave Display', cursive;
     text-align: center;
+    background-color: #000;
+    background-image: linear-gradient(45deg, #9cdcec, #ac9cec, #ec9cdc);
+    background-size: 600% 600%;
+    animation: gradient 20s ease infinite;
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 h1 {
     margin-top: 50px;
+}
+
+/* Add styles for the logo */
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    background-image: url("/images/transparentlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .shake-animation {
@@ -15,30 +47,31 @@ h1 {
 }
 
 #eight-ball {
-    width: 200px;
-    height: 200px;
+    width: 393px;
+    height: 397px;
     margin: 50px auto;
     border-radius: 50%;
     background-color: black;
+    background-image: url('../images/8ballemptynew.png');
     position: relative;
     animation: shake-animation;
 }
 #answer {
     width: 120px;
     height: 120px;
-    background-image: url('images/magic-ball.png');
+    /*background-image: url('../images/magic-ball.png');*/
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 135px;
+    left: 135px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 #shake-button {
     margin-top: 20px;

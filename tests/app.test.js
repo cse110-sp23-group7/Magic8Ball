@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-const {sum, getRandomAnswer} = require("../js/script");
+const {sum, getRandomAnswer} = require("../js/app");
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);

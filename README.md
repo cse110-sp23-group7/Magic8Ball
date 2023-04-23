@@ -44,12 +44,12 @@ Magic8Ball/
 |-- css/
 |   |-- style.css   # Main stylesheet
 |-- js/
-|   |-- script.js   # Main script
+|   |-- app.js   # Main script
 |-- img/
 |   |-- image1.jpg
 |   |-- image2.png
 |-- tests/          # Unit tests, powered by Jest
-|   |-- script.test.js
+|   |-- app.test.js
 |-- node_modules/
 |-- package.json
 |-- .gitignore

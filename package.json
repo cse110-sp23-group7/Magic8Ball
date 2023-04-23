@@ -2,7 +2,7 @@
   "name": "magic8ball",
   "version": "1.0.0",
   "description": "CSE 110 Team 404 Project which uses ChatGPT to create a Magic 8 Ball app.",
-  "main": "js/script.js",
+  "main": "js/app.js",
   "directories": {
     "test": "tests"
   },

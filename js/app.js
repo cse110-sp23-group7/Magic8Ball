@@ -1,4 +1,4 @@
-// script.js
+// app.js
 console.log('Hello, World!');
 
 const answers = [

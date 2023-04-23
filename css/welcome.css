@@ -51,9 +51,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
-    max-width: 500px;
+    max-width: 475px;
     height: 500px;
-    background-image: url("/images/8balltransparent.png");
+    background-image: url("/images/8balltransparentnew.png");
     background-size: contain;
     background-repeat: no-repeat;
   }

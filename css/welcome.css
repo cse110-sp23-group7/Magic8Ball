@@ -1,7 +1,22 @@
 /* Add styles for the background gradient */
 body {
-    background: linear-gradient(to bottom, #FFFFFF, #87CEEB);
+  background-color: #000;
+  background-image: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+  background-size: 600% 600%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
   /* Add styles for the logo */
   .logo {

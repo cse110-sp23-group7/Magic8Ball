@@ -39,10 +39,6 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    opacity: 0;
-    animation: fade-in 1s ease-out;
-    animation-delay: 1.75s;
-    animation-fill-mode: forwards;
 }
 #shake-button {
     margin-top: 20px;

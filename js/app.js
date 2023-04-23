@@ -25,7 +25,7 @@ const shakeButton = document.querySelector('#shake-button');
 const shakeAnimationDuration = 1750;
 window.addEventListener("DOMContentLoaded", () => {
     // DOM ready! Images, frames, and other subresources are still downloading.
-    shakeButton.addEventListener('click', showAnswer);
+    shakeButton.addEventListener('click', getAnswer);
     shakeButton.addEventListener('click', shake);
     
 });
@@ -59,15 +59,24 @@ function shake() {
     }, animationInterval);
     
 }
-function showAnswer() {
+
+function getAnswer() {
     const randomIndex = Math.floor(Math.random() * answers.length);
     answer.textContent = answers[randomIndex];
+
+    fadeAnswerIn(0); // Start with opacity 0
 }
 
-
-
-
-    
+function fadeAnswerIn(opacity) {
+    const fadeInSpeed = 0.1;
+    if (opacity < 1) {
+        opacity += fadeInSpeed;
+        answer.style.opacity = opacity;
+        setTimeout(() => {
+            fadeAnswerIn(opacity); // Recursively call until opacity reaches 1
+        }, 100);
+    }
+}
 
 
 module.exports = {};

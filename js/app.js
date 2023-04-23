@@ -22,11 +22,18 @@ const answers = [
 const eightBall = document.querySelector('#eight-ball');
 const answer = document.querySelector('#answer');
 const shakeButton = document.querySelector('#shake-button');
+const shakeAnimationDuration = 1750;
+window.addEventListener("DOMContentLoaded", () => {
+    // DOM ready! Images, frames, and other subresources are still downloading.
+    shakeButton.addEventListener('click', getAnswer);
+    shakeButton.addEventListener('click', shake);
+    
+});
+
 function shake() {
     eightBall.classList.add('shake-animation');
-    const animationDuration = 1750;
     const framesPerSecond = 30;
-    const animationInterval = animationDuration / (framesPerSecond * 2);
+    const animationInterval = shakeAnimationDuration / (framesPerSecond * 2);
     let currentFrame = 0;
     const animationFrames = [
         'translateX(0)',
@@ -50,17 +57,26 @@ function shake() {
             clearInterval(animationIntervalId);
         }
     }, animationInterval);
-    setTimeout(showAnswer, animationDuration);
+    
 }
-function showAnswer() {
+
+function getAnswer() {
     const randomIndex = Math.floor(Math.random() * answers.length);
     answer.textContent = answers[randomIndex];
-    answer.style.opacity = 0;
-    answer.style.transition = 'opacity 1s';
-    answer.style.opacity = 1;
+
+    fadeAnswerIn(0); // Start with opacity 0
 }
-if (shakeButton) {
-    shakeButton.addEventListener('click', shake);
+
+function fadeAnswerIn(opacity) {
+    const fadeInSpeed = 0.1;
+    if (opacity < 1) {
+        opacity += fadeInSpeed;
+        answer.style.opacity = opacity;
+        setTimeout(() => {
+            fadeAnswerIn(opacity); // Recursively call until opacity reaches 1
+        }, 100);
+    }
 }
+
 
 module.exports = {};

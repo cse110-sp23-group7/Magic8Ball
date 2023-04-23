@@ -10,7 +10,7 @@ body {
     left: 0px;
     width: 200px;
     height: 200px;
-    background-image: url("/Magic8Ball/images/transparentlogo.png");
+    background-image: url("/images/transparentlogo.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -35,7 +35,7 @@ body {
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    background-image: url("/Magic8Ball/images/magic-ball.png");
+    background-image: url("/images/magic-ball.png");
     background-size: contain;
     background-repeat: no-repeat;
   }

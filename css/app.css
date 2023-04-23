@@ -27,12 +27,12 @@ h1 {
 }
 
 #eight-ball {
-    width: 200px;
-    height: 200px;
+    width: 393px;
+    height: 397px;
     margin: 50px auto;
     border-radius: 50%;
     background-color: black;
-    background-image: url('../images/magic-ball.png');
+    background-image: url('../images/8ballemptynew.png');
     position: relative;
     animation: shake-animation;
 }
@@ -44,8 +44,8 @@ h1 {
     background-size: cover;
     border-radius: 50%;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 135px;
+    left: 135px;
     display: flex;
     justify-content: center;
     align-items: center;

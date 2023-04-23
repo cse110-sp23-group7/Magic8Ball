@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 body {
   background-color: #000;
-  background-image: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+  background-image: linear-gradient(45deg, #9cdcec, #ac9cec, #ec9cdc);
   background-size: 600% 600%;
   animation: gradient 20s ease infinite;
 }

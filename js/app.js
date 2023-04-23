@@ -1,37 +1,64 @@
-// app.js
-console.log('Hello, World!');
-
 const answers = [
-    "Yes", "No", "Maybe", "Ask again later", "Outlook not so good", "Cannot predict now"
+    'It is certain',
+    'It is decidedly so',
+    'Without a doubt',
+    'Yes – definitely',
+    'You may rely on it',
+    'As I see it, yes',
+    'Most likely',
+    'Outlook good',
+    'Yes',
+    'Signs point to yes',
+    'Reply hazy, try again',
+    'Ask again later',
+    'Better not tell you now',
+    'Cannot predict now',
+    'Concentrate and ask again',
+    'Don\'t count on it',
+    'Outlook not so good',
+    'My sources say no',
+    'Very doubtful'
 ];
-
-// User-defined functions (make sure to export on last line)
-// --------------------------------------------------------
-function sum(a, b) {
-    return a + b;
+const eightBall = document.querySelector('#eight-ball');
+const answer = document.querySelector('#answer');
+const shakeButton = document.querySelector('#shake-button');
+function shake() {
+    eightBall.classList.add('shake-animation');
+    const animationDuration = 1750;
+    const framesPerSecond = 30;
+    const animationInterval = animationDuration / (framesPerSecond * 2);
+    let currentFrame = 0;
+    const animationFrames = [
+        'translateX(0)',
+        'translateY(-5px)',
+        'translateX(-5px)',
+        'translateY(5px)',
+        'translateX(5px)',
+        'translateY(-5px)',
+        'translateX(-5px)',
+        'translateY(5px)',
+        'translateX(5px)',
+        'translateY(-5px)',
+        'translateX(-5px)',
+        'translateY(5px)',
+        'translateX(0)'
+    ];
+    const animationIntervalId = setInterval(() => {
+        eightBall.style.transform = animationFrames[currentFrame];
+        currentFrame++;
+        if (currentFrame === animationFrames.length) {
+            clearInterval(animationIntervalId);
+        }
+    }, animationInterval);
+    setTimeout(showAnswer, animationDuration);
 }
-function getRandomAnswer() {
-    // Generate a random number between 0 and 5
-    const randomIndex = Math.floor(Math.random() * 6);
-    // Get the answer from the answers array
-    return answers[randomIndex];
+function showAnswer() {
+    const randomIndex = Math.floor(Math.random() * answers.length);
+    answer.textContent = answers[randomIndex];
+    answer.style.opacity = 0;
+    answer.style.transition = 'opacity 1s';
+    answer.style.opacity = 1;
 }
+shakeButton.addEventListener('click', shake);
 
-// Document event listeners
-// ------------------------
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM loaded')
-    const magicBall = document.getElementById('magic-ball');
-    const shakeButton = document.getElementById('shake-button');
-    const answerText = document.getElementById('answer');
-
-    function updateAnswer() {
-        // Display the answer
-        answerText.innerHTML = getRandomAnswer();
-    }
-
-    // Add event listener for the shake button
-    shakeButton.addEventListener('click', updateAnswer);
-});
-
-module.exports = {sum, getRandomAnswer};
+module.exports = {};

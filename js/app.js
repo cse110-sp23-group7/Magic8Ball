@@ -59,6 +59,8 @@ function showAnswer() {
     answer.style.transition = 'opacity 1s';
     answer.style.opacity = 1;
 }
-shakeButton.addEventListener('click', shake);
+if (shakeButton) {
+    shakeButton.addEventListener('click', shake);
+}
 
 module.exports = {};

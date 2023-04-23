@@ -5,6 +5,15 @@ body {
 h1 {
     margin-top: 50px;
 }
+
+.shake-animation {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+}
+
 #eight-ball {
     width: 200px;
     height: 200px;
@@ -12,8 +21,7 @@ h1 {
     border-radius: 50%;
     background-color: black;
     position: relative;
-    animation: shake 1.75s ease-out;
-    animation-fill-mode: forwards;
+    animation: shake-animation;
 }
 #answer {
     width: 120px;
@@ -48,19 +56,19 @@ h1 {
 }
 @keyframes shake {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(0);
     }
     25% {
-        transform: rotate(15deg);
+        transform: translateX(-5px);
     }
     50% {
-        transform: rotate(-10deg);
+        transform: translateX(5px);
     }
     75% {
-        transform: rotate(5deg);
+        transform: translateX(-5px);
     }
     100% {
-        transform: rotate(0deg);
+        transform: translateX(0);
     }
 }
 @keyframes fade-in {

@@ -41,8 +41,10 @@ npm test
 Magic8Ball/
 |-- index.html      # Home page
 |-- app.html        # Main magic 8 ball page
+|-- documentation.md   # User documentation of our website
 |-- css/
 |   |-- style.css   # Main stylesheet
+|   |-- app.css
 |-- js/
 |   |-- app.js   # Main script
 |-- img/
@@ -50,6 +52,9 @@ Magic8Ball/
 |   |-- image2.png
 |-- tests/          # Unit tests, powered by Jest
 |   |-- app.test.js
+|-- deliverables/   # Video and powerpoint
+|   |-- 8ballvideo.mp4
+|   |-- CSE 110 Presentation.pptx
 |-- node_modules/
 |-- package.json
 |-- .gitignore

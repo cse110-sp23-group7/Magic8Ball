@@ -85,10 +85,14 @@ function shake() {
 // Get a random answer from the answers array and display it
 function getAnswer() {
     const randomIndex = Math.floor(Math.random() * answers.length);
-    answer.textContent = answers[randomIndex];
+    let retAnswer = answers[randomIndex];
+    if (answer) {
+        answer.textContent = answers[randomIndex];
+        // Fade in the answer
+        fadeAnswerIn(0); // Start with opacity 0
+    }
 
-    // Fade in the answer
-    fadeAnswerIn(0); // Start with opacity 0
+    return retAnswer;
 }
 
 // Recursive funtion to fade in the answer
@@ -104,4 +108,4 @@ function fadeAnswerIn(opacity) {
 }
 
 // Export an empty module (presumably for testing purposes)
-module.exports = {};
+module.exports = {getAnswer};
